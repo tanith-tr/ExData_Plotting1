@@ -30,7 +30,7 @@ dataSub$Date <- as.Date(dataSub$Date, "%d/%m/%Y")
 dataSub$DateTime <- strptime(dataSub$DateTime, "%d/%m/%Y %H:%M:%S")
 
 # Construct the plot and save it to a PNG file with a width of 480 pixels and a height of 480 pixels
-png(filename = "plot3.png", width = 480, height = 480, units = "px", bg = "white")
+png(filename = "plot3.png", width = 480, height = 480, units = "px", bg = "transparent")
 plot(dataSub$DateTime, dataSub$Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "n")
 lines(dataSub$DateTime, dataSub$Sub_metering_1, col = "black")
 lines(dataSub$DateTime, dataSub$Sub_metering_2, col = "red")

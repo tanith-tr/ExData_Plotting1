@@ -30,7 +30,7 @@ dataSub$Date <- as.Date(dataSub$Date, "%d/%m/%Y")
 dataSub$DateTime <- strptime(dataSub$DateTime, "%d/%m/%Y %H:%M:%S")
 
 # Construct the plot and save it to a PNG file with a width of 480 pixels and a height of 480 pixels
-png(filename = "plot4.png", width = 480, height = 480, units = "px", bg = "white")
+png(filename = "plot4.png", width = 480, height = 480, units = "px", bg = "transparent")
 par(mfcol=c(2,2))
 with(dataSub, {
         plot(DateTime, Global_active_power, xlab ="", ylab = "Global Active Power", type ="l")
